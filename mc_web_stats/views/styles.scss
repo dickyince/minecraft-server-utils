@@ -1,10 +1,74 @@
 $background: #CCCCCC;
-$dark-green: #669900;
+$dark-green: #447700;
+$tab-green: #95bc9b;
+$tab-yellow: #acbc7b;
+$cloudy: #D2E5EF;
 
 body {
-  background-color: $background;
+  background-image: url( '/img/bg.png' );
+  font-family: helvetica, sans-serif;
 }
 
-h1 {
-  color: $dark-green;
+span.header {
+  color: $cloudy;
+  position: relative;
+  margin-left: 6px;
+  top: -12px;
+}
+
+img#icon {
+  margin-left: 6px;
+  max-width: 220px;
+  border: solid #222 2px;
+  box-shadow: 4px 3px 8px 3px rgba(46, 35, 22, 0.7);
+}
+
+div.menu {
+  margin-left: 1em;
+  display: inline-block;
+}
+
+div.menu a {
+  text-decoration: none;
+  padding: 4px 12px;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  margin-left: -8px;
+}
+
+div.menu a:hover {
+  color: #461;
+}
+
+div.menu a:before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom right, $tab-green + #212, $tab-green);
+  transform: perspective(10px) rotateX(2deg);
+  border-radius: 3px;
+  border: solid ($tab-green - #444) 1px;
+  box-shadow: 2px -2px 9px -2px rgba(46, 35, 22, 0.55);
+}
+
+div.menu a:hover:before {
+  background: linear-gradient( to bottom right, $tab-green + #434, $tab-green - #212 );
+}
+
+div.menu a:active:before {
+  background: linear-gradient( to bottom right, $tab-yellow + #444, $tab-yellow - #222 );
+}
+
+section {
+  margin-left: 4px;
+  margin-top: 0;
+  padding-top: 6px;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  background: linear-gradient(to bottom, rgba(166, 156, 121, 0.72), #CCC);
+  border-radius: 8px;
+  display: inline-block;
+  min-width: 66%;
 }
