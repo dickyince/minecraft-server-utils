@@ -1,0 +1,24 @@
+<h2>Player Stats</h2>
+<form action="/stats" method="get">
+  <select name="objective" onchange="this.form.submit()">
+      <option value="">Select a Stat</option>
+    <% @sorted_objectives.each do |objective| %>
+    <% if ( objective[1].player_scores.keys.length > 0 ) %>
+      
+      <option<% if ( !@objective.nil? && @objective == objective[0] ) %> selected="selected"<% end %> value="<%= objective[0] %>"><%= objective[1].display_name %></option>
+    <% end %>
+    <% end %>
+  </select>
+</form>
+
+<% if ( !@objective.nil? && !@objectives[@objective].nil? )  %>
+<table>
+  <tbody>
+    <tr><th colspan='2'><%= @objectives[@objective].display_name %></th></tr>
+    <% player_scores = @objectives[@objective].sorted_scores %>
+    <% player_scores.each do |score| %>
+      <tr><td><%= score[0] %></td><td><%= score[1] %></td></tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>

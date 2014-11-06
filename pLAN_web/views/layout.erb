@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title><%= @title || "pLAN" %></title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+<h1>
+<img id="icon" src="/img/pLAN.png" />
+<span class="header">minecraft server</span>
+</h1>
+<div class="menu">
+<a href="/" title="Home">Home</a>
+<a href="/mumble" title="Mumble">Set up Mumble</a>
+<a href="/stats" title="Stats">Player Stats</a>
+<a href="/map" title="Map">View World Map</a>
+</div>
+</header>
+<section>
+<%= yield %>
+</section>
+</body>
+</html>
