@@ -4,6 +4,7 @@ gem 'sinatra-reloader'
 gem 'data_mapper'
 gem 'dm-sqlite-adapter'
 gem 'sass'
+gem 'rubygems'
 gem 'daemons'
 
 # ruby '2.0.0'

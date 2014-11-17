@@ -33,6 +33,18 @@ get "/styles.css" do
 end
 
 not_found do
-  @user = get_missing_user
+  @title = '404 Missing'
+  case rand( 5 )
+  when 1
+    @message = 'Looks like your lost in dickyince\'s zoo.'
+  when 2
+    @message = 'Looks like your too late, Redplague has alreay burnt your house down!'
+  when 3
+    @message = 'Not found, like all that stuff Utopia1138 left in his chests.'
+  when 4
+    @message = 'The page seems to have wandered off, probably looking for toothball.'
+  when 5
+    @message = 'Don\'t know.'
+  end
   erb :missing
 end

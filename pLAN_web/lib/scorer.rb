@@ -2,7 +2,7 @@ require 'yaml'
 require_relative 'objective'
 
 def parse_file
-  yaml_string = `nbt2yaml /var/games/minecraft/servers/pLAN/pLAN/data/scoreboard.dat`
+  yaml_string = `nbt2yaml $HOME/pLAN_backup/data/scoreboard.dat`
   yaml_string = yaml_string.split("\n")[2..-1].join "\n"
   after_string = ''
   yaml_string.each_line do |line|

@@ -1,5 +1,7 @@
 To get the overviewer script up and runnning follow these steps:
 
 1. add the "deb http://overviewer.org/debian ./" repo to your "/etc/apt/sources.list" file
-2. run "sudo apt-get update"
-3. run "sudo apt-get install overviewer"
+2. run "wget -O - http://overviewer.org/debian/overviewer.gpg.asc | sudo apt-key add -" to install the repo key
+3. run "sudo apt-get update"
+4. run "sudo apt-get install minecraft-overviewer"
+5. run "wget https://s3.amazonaws.com/Minecraft.Download/versions/1.8/1.8.jar -P ~/.minecraft/versions/1.8/"

@@ -1,1 +1,3 @@
 pLAN_web/public/*
+pLAN_web/.sass-cache/*
+pLAN_web/db/*.db
