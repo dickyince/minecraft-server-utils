@@ -1,5 +1,0 @@
-INSERT INTO users (user_id,username,playtime,missing_message) VALUES (1,'dickyince',0,"Looks like your lost in dickyince's zoo.");
-INSERT INTO users (user_id,username,playtime,missing_message) VALUES (2,'Redplague',0,"Looks like your too late, Redplague has alreay burnt your house down!");
-INSERT INTO users (user_id,username,playtime,missing_message) VALUES (3,'Utopis1138',0,"Not found, like all that stuff Utopia1138 left in his chests.");
-INSERT INTO users (user_id,username,playtime,missing_message) VALUES (4,'toothball',0,"404: the page seems to have wandered off, probably looking for toothball.");
-INSERT INTO users (user_id,username,playtime,missing_message) VALUES (5,'Fitzretsil'0,"Don't know.");
